@@ -1,4 +1,5 @@
 # Abstract
+
 In cancer, there are over 200 different forms. Out of 200, melanoma is the deadliest form of skin cancer. The diagnostic procedure for melanoma starts with clinical screening, followed by dermoscopic analysis and histopathological examination. Melanoma skin cancer is highly curable if it gets identified at the early stages. The first step of Melanoma skin cancer diagnosis is to conduct a visual examination of the skin's affected area. Dermatologists take the dermatoscopic images of the skin lesions by the high-speed camera, which have an accuracy of 65-80% in the melanoma diagnosis without any additional technical support. With further visual examination by cancer treatment specialists and dermatoscopic images, the overall prediction rate of melanoma diagnosis raised to 75-84% accuracy. The project aims to build an automated classification system based on image processing techniques to classify skin cancer using skin lesions images.
 
 # Problem Statement
@@ -21,7 +22,7 @@ The data set contains the following diseases:
 8. Squamous cell carcinoma
 9. Vascular lesion
 
-## Bar plot for each class and no. of image
+## Bar Plot (each class vs No. of images)
 
 ![download Bar Plot](https://user-images.githubusercontent.com/100438618/215332835-900b7e36-3115-44eb-ae7b-713eeb67d498.png)
 
@@ -44,39 +45,22 @@ To classify skin cancer using skin lesions images. To achieve higher accuracy an
 ## Final CNN Model Architecture
 
 Model: "sequential_3"
-_________________________________________________________________
- Layer (type)                Output Shape              Param #   
-=================================================================
- rescaling_2 (Rescaling)     (None, 180, 180, 3)       0         
-                                                                 
- conv2d_6 (Conv2D)           (None, 180, 180, 32)      896       
-                                                                 
- max_pooling2d_6 (MaxPooling  (None, 90, 90, 32)       0         
- 2D)                                                             
-                                                                 
- conv2d_7 (Conv2D)           (None, 90, 90, 64)        18496     
-                                                                 
- max_pooling2d_7 (MaxPooling  (None, 45, 45, 64)       0         
- 2D)                                                             
-                                                                 
- conv2d_8 (Conv2D)           (None, 45, 45, 128)       73856     
-                                                                 
- max_pooling2d_8 (MaxPooling  (None, 22, 22, 128)      0         
- 2D)                                                             
-                                                                 
- dropout_1 (Dropout)         (None, 22, 22, 128)       0         
-                                                                 
- flatten_2 (Flatten)         (None, 61952)             0         
-                                                                 
- dense_4 (Dense)             (None, 128)               7929984   
-                                                                 
- dense_5 (Dense)             (None, 9)                 1161      
-                                                                 
-=================================================================
-Total params: 8,024,393
-Trainable params: 8,024,393
-Non-trainable params: 0
-_________________________________________________________________
+
+| Layer (type)           |     Output Shape     |     Param # |  
+| ---------------------- | -------------------- | ----------- |
+| rescaling_2 (Rescaling)|   (None, 180, 180, 3)|      0      |                                                                  
+| conv2d_6 (Conv2D)      |   (None, 180, 180, 32)|      896   |                                                                   
+|max_pooling2d_6 (MaxPooling 2D) |   (None, 90, 90, 32) |  0  |                                                                                                          | conv2d_7 (Conv2D)      |     (None, 90, 90, 64) |     18496 | 
+|max_pooling2d_7 (MaxPooling 2D) | (None, 45, 45, 64) |    0  |                                                                  
+|conv2d_8 (Conv2D)       |   (None, 45, 45, 128) |   73856    |                                                                  
+|max_pooling2d_8 (MaxPooling 2D) |  (None, 22, 22, 128) |  0  |                                                                    
+| dropout_1 (Dropout)    |     (None, 22, 22, 128) |      0   |                                                                      
+| flatten_2 (Flatten)   |      (None, 61952)      |       0   |                                                                    
+| dense_4 (Dense)       |      (None, 128)        |   7929984 |                                                                    
+| dense_5 (Dense)       |      (None, 9)        |     1161    |                                                                   
+|Total params           :                      ||   8,024,393 |
+|Trainable params     :                        ||   8,024,393 |
+|Non-trainable params   :                      ||           0 |
 
 ## Visualizing Final CNN Model 
 
