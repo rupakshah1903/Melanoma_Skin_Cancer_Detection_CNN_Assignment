@@ -22,11 +22,11 @@ The data set contains the following diseases:
 8. Squamous cell carcinoma
 9. Vascular lesion
 
-## Bar Plot (each class vs No. of images)
+## Bar Plot (Each class vs No. of images)
 
 ![download Bar Plot](https://user-images.githubusercontent.com/100438618/215332835-900b7e36-3115-44eb-ae7b-713eeb67d498.png)
 
-## Sample Image from the Dataset
+## Sample Lesion Image from the Dataset
 
 ![Sample Image from Dataset](https://user-images.githubusercontent.com/100438618/215332913-dcfbb3d8-5ddb-4341-aee4-1e6261761aa2.png)
 
